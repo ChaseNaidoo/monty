@@ -26,6 +26,7 @@ instruction_t instructions[] = {
 				{"mod", mod},
 				{"pchar", pchar},
 				{"pstr", pstr},
+				{"rotl", rotl},
 				{NULL, NULL}
 };
   
