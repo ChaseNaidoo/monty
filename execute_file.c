@@ -48,6 +48,10 @@ instruction_t instructions[] = {
 	while ((read = getline(&line, &len, file)) != -1)
 	{
 	line_number++;
+
+	if (line[0] == '#')
+	continue;
+
 	opcode = strtok(line, " \t\n");
 
 	if (opcode == NULL)
