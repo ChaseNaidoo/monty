@@ -1,15 +1,5 @@
 #include "monty.h"
 
-stack_t *stack = NULL;
-
-instruction_t instructions[] = {
-	{"push", push},
-	{"pop", pop},
-	{"pall", pall}
-	{"pint", pint}
-	{NULL, NULL}
-};
-
 /**
  * main - handles the main logic of the monty interpreter
  *

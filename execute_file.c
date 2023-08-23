@@ -1,3 +1,5 @@
+#define _POSIX_C_SOURCE 200809L
+
 #include "monty.h"
 
 /**
@@ -10,6 +12,15 @@
  */
 void execute_file(const char *filename)
 {
+instruction_t instructions[] = {
+				{"push", push},
+				{"pop", pop},
+				{"pall", pall},
+				{"pint", pint},
+				{NULL, NULL}
+};
+  
+  
 	FILE *file;
 	char *line = NULL;
 	size_t len = 0;
@@ -17,9 +28,8 @@ void execute_file(const char *filename)
 	unsigned int line_number = 0;
 	stack_t *stack = NULL;
 	char *opcode;
-	char *arg;
 	int i;
-	
+
 	file = fopen(filename, "r");
 
 	if (!file)
@@ -32,7 +42,6 @@ void execute_file(const char *filename)
 	{
 	line_number++;
 	opcode = strtok(line, " \t\n");
-	arg = strtok(NULL, " \t\n");
 
 	if (opcode == NULL)
 	continue;
