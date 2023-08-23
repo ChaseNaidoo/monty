@@ -20,16 +20,10 @@ void pstr(stack_t **stack, unsigned int line_number)
 	{
 	value = current->n;
 
-	if (value >= 1 && value <= 127)
-	{
+	if (value == 0 || value < 1 || value > 127)
+	break;
+
 	putchar(value);
-		if (value == 0)
-		break;
-	}
-	else
-		{
-		break;
-		}
 	current = current->next;
 	}
 	putchar('\n');
