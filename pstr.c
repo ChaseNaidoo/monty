@@ -23,9 +23,8 @@ void pstr(stack_t **stack, unsigned int line_number)
 	if (value == 0 || value < 1 || value > 127)
 	break;
 
-	putchar(value);
+	printf("%c", value);
 	current = current->next;
 	}
 	putchar('\n');
-	fflush(stdout);
 }
