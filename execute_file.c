@@ -28,6 +28,8 @@ instruction_t instructions[] = {
 				{"pstr", pstr},
 				{"rotl", rotl},
 				{"rotr", rotr},
+				{"stack", stack},
+				{"queue", queue},
 				{NULL, NULL}
 };
   
